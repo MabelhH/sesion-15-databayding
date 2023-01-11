@@ -1,0 +1,34 @@
+<div class="respuesta">
+    {{formLogin.value | json}}
+ </div>
+ <br>
+  <div class="container">
+     <div class="formulario">
+        <form [formGroup]="formLogin" (submit)="send()">
+         <h1>Registro Usuario</h1>
+            <div class="my-5">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" id="nombre" formControlName="nombre" class="form-control" >
+            </div>
+            <div class="my-5">
+                <label for="dni" class="form-label">DNI:</label>
+                <input type="number" id="dni" formControlName="DNI" class="form-control" >
+            </div>
+            
+            <div class="my-5">
+             <label for="select">Estado Civil.</label>
+             <select class="form-select" (change)="chageestado()" name="select" id="select" formControlName="estado" aria-label="Default select example">
+                 <option value="ninguno" selected>Ninguno </option>
+                 <option value="soltero">Soltero</option>
+                 <option value="casado">Casado</option>
+                 <option value="viuda">Viudo</option>
+                 <option value="conviviente">Conviviente</option>
+                 
+               </select>
+            </div>
+            <div class="my-5 py-1 px-3 text-white bg-blue-500 rounded">
+                <button type="submit" class="boton" [disabled]="formLogin.invalid">Send</button>
+            </div> 
+        </form>
+    </div>
+    

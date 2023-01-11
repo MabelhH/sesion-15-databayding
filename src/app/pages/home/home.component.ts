@@ -68,13 +68,6 @@ loadAPI():any{
 send(): any{
   console.log(this.formLogin.value)
 }
-eliminar(){
- 
-  
-}
-
-
-
 
 
 registrar(nombre2:string,apellido:string,carrera:string){
@@ -83,5 +76,9 @@ registrar(nombre2:string,apellido:string,carrera:string){
  }
  // lo eliminas si se realizo el delete.
 
+ eliminar(index:number){
+  this.datos.splice(index,1)
+   
+ }
 
 }

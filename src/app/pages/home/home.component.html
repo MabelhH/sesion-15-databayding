@@ -45,11 +45,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let nom of datos">
+              <tr *ngFor="let nom of datos;let i=index">
                <td>{{nom.nombre2}}</td>
                <td>{{nom.apellido}}</td>
                <td>{{nom.carrera}}</td>
-               <td><button class="btn btn-primary" type="submit" (click)="eliminar()">eliminar</button></td>
+               <td><button class="btn btn-primary" type="submit" (click)="eliminar(i)">eliminar</button></td>
               </tr>
             </tbody>
           </table>

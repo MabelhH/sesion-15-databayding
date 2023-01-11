@@ -8,7 +8,7 @@
          <h1>Registro Usuario</h1>
             <div class="my-5">
                 <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" formControlName="nombre" class="form-control" >
+                <input type="text" id="nombre" formControlName="nombre" class="form-control">
             </div>
             <div class="my-5">
                 <label for="dni" class="form-label">DNI:</label>
@@ -31,4 +31,59 @@
             </div> 
         </form>
     </div>
+    <br>
+    <div class="cont-texto container-2">
+        <h1>Formulario de Registro</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">apellido</th>
+                <th scope="col">carrera</th>
+                <th scope="col">Eliminar</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let nom of datos">
+               <td>{{nom.nombre2}}</td>
+               <td>{{nom.apellido}}</td>
+               <td>{{nom.carrera}}</td>
+               <td><button class="btn btn-primary" type="submit" (click)="eliminar()">eliminar</button></td>
+              </tr>
+            </tbody>
+          </table>
+        <br>
+        <form action="row g-3">  
+            <form class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre2" #nombre>
+                </div>
+                <br>
+                <div class="col-md-6">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" #apellido >
+                </div>
+                <br>
+                <div class="col-md-6">
+                  <label for="carrera" class="form-label">Carrera</label>
+                  <input type="text" class="form-control" id="carrera" #carrera >
+                </div>
+            
+                <div class="col-12">
+                  <button type="submit" class="btn btn-info" (click)="registrar(nombre.value,apellido.value,carrera.value)">Agregar datos</button>
+                </div>
+              </form>
+        </form>
+    </div>
     
+      
+    
+      
+
+
+
+
+ 
+

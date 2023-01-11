@@ -27,3 +27,24 @@ label{
   font-size: 25px;
   border-radius: 6px;
 }
+
+.table{
+    height: 50px;
+    width: 99%;
+    border: 2px solid;
+    margin: 5px;
+    text-align: center;
+    margin-top: 60px;
+
+}
+th,td{
+    border: 2px solid; 
+}
+
+.container-2{
+    margin-top: 70px;
+ border-radius: 6px;
+ width: 90%;
+ padding: 45px;
+ border: 2px solid blueviolet;
+}

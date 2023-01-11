@@ -7,6 +7,7 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+datos:any[]=[{nombre2:'juan',apellido:'guerra',carrera:'sitemas'}]
 
 @Output() repuesta:string='';
 public formLogin!: FormGroup;
@@ -60,19 +61,27 @@ loadAPI():any{
     estado:''
   };
 
-
-
   this.formLogin.patchValue(response);
-  
-  
+   
+}
+
+send(): any{
+  console.log(this.formLogin.value)
+}
+eliminar(){
  
   
 }
 
 
-send(): any{
-  console.log(this.formLogin.value)
-}
+
+
+
+registrar(nombre2:string,apellido:string,carrera:string){
+  this.datos.push({nombre2,apellido,carrera})
+  
+ }
+ // lo eliminas si se realizo el delete.
 
 
 }
